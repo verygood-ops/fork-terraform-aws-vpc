@@ -22,12 +22,6 @@ variable "security_group_ids" {
   default     = []
 }
 
-variable "service_name" {
-  description = "The service name for the VPC endpoint service. If not provided, the data source will be used."
-  type        = string
-  default     = null
-}
-
 variable "subnet_ids" {
   description = "Default subnets IDs to associate with the VPC endpoints"
   type        = list(string)

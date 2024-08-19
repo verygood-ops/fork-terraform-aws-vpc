@@ -8,23 +8,11 @@ locals {
   security_group_ids = var.create && var.create_security_group ? concat(var.security_group_ids, [aws_security_group.this[0].id]) : var.security_group_ids
 }
 
-data "aws_vpc_endpoint_service" "this" {
-  for_each = local.endpoints
-
-  service      = try(each.value.service, null)
-  service_name = try(each.value.service_name, null)
-
-  filter {
-    name   = "service-type"
-    values = [try(each.value.service_type, "Interface")]
-  }
-}
-
 resource "aws_vpc_endpoint" "this" {
   for_each = local.endpoints
 
   vpc_id            = var.vpc_id
-  service_name      = try(each.value.service_name, data.aws_vpc_endpoint_service.this[each.key].service_name)
+  service_name      = try(each.value.service_name, null)
   vpc_endpoint_type = try(each.value.service_type, "Interface")
   auto_accept       = try(each.value.auto_accept, null)
 

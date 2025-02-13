@@ -402,6 +402,12 @@ variable "private_subnet_tags_per_az" {
   default     = {}
 }
 
+variable "private_subnet_tags_per_name" {
+  description = "Additional tags for the private subnets where the primary key is the subnet name"
+  type        = map(map(string))
+  default     = {}
+}
+
 variable "private_route_table_tags" {
   description = "Additional tags for the private route tables"
   type        = map(string)

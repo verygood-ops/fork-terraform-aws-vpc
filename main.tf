@@ -285,7 +285,8 @@ resource "aws_subnet" "private" {
     },
     var.tags,
     var.private_subnet_tags,
-    lookup(var.private_subnet_tags_per_az, element(var.azs, count.index), {})
+    lookup(var.private_subnet_tags_per_az, element(var.azs, count.index), {}),
+    lookup(var.private_subnet_tags_per_name, try(var.private_subnet_names[count.index], ""), {})
   )
 }
 

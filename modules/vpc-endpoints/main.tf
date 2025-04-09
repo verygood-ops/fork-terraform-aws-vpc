@@ -13,6 +13,7 @@ resource "aws_vpc_endpoint" "this" {
 
   vpc_id            = var.vpc_id
   service_name      = try(each.value.service_name, null)
+  service_region    = try(each.value.service_region, null)
   vpc_endpoint_type = try(each.value.service_type, "Interface")
   auto_accept       = try(each.value.auto_accept, null)
 

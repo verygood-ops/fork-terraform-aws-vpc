@@ -10,8 +10,8 @@ locals {
 
 data "aws_vpc_endpoint_service" "this" {
   for_each = {
-      for k, v in local.endpoints : k => v
-      if !try(contains(keys(v), "service_endpoint"), false) # Skip if service_endpoint is defined, needed when the vpc endpoint service is in a different AWS account than the vpc endpoint
+    for k, v in local.endpoints : k => v
+    if !try(contains(keys(v), "service_endpoint"), false) # Skip if service_endpoint is defined, needed when the vpc endpoint service is in a different AWS account than the vpc endpoint
   }
 
   service         = try(each.value.service, null)

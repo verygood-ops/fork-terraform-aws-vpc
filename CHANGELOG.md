@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file.
 
+## [6.0.1](https://github.com/terraform-aws-modules/terraform-aws-vpc/compare/v6.0.0...v6.0.1) (2025-06-20)
+
+
+### Bug Fixes
+
+* Bump AWS provider requirement to v6 everywhere ([#1208](https://github.com/terraform-aws-modules/terraform-aws-vpc/issues/1208)) ([26c99a5](https://github.com/terraform-aws-modules/terraform-aws-vpc/commit/26c99a53326e7455a7f9f1162839822104809c46))
+
+## [6.0.0](https://github.com/terraform-aws-modules/terraform-aws-vpc/compare/v5.21.1...v6.0.0) (2025-06-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Bump AWS provider requirement to v6 (#1205)
+
+### Features
+
+* Bump AWS provider requirement to v6 ([#1205](https://github.com/terraform-aws-modules/terraform-aws-vpc/issues/1205)) ([4483701](https://github.com/terraform-aws-modules/terraform-aws-vpc/commit/4483701c77f661b4ed3b468e5229e030e540d6f3))
+
+## [5.21.1](https://github.com/terraform-aws-modules/terraform-aws-vpc/compare/v5.21.0...v5.21.1) (2025-06-19)
+
+
+### Bug Fixes
+
+* Fixed deprecation attribute warning with AWS provider v6 ([#1200](https://github.com/terraform-aws-modules/terraform-aws-vpc/issues/1200)) ([bf04a75](https://github.com/terraform-aws-modules/terraform-aws-vpc/commit/bf04a755dc0b46d49dadf589c84832c0dd556a6d))
+
+## [5.21.0](https://github.com/terraform-aws-modules/terraform-aws-vpc/compare/v5.20.0...v5.21.0) (2025-04-21)
+
+
+### Features
+
+* Add support for `subnet_configuration` on VPC endpoints ([#1164](https://github.com/terraform-aws-modules/terraform-aws-vpc/issues/1164)) ([507193e](https://github.com/terraform-aws-modules/terraform-aws-vpc/commit/507193ee659f6f0ecdd4a75107e59e2a6c1ac3cc))
+
+## [5.20.0](https://github.com/terraform-aws-modules/terraform-aws-vpc/compare/v5.19.0...v5.20.0) (2025-04-21)
+
+
+### Features
+
+* Allow setting custom tags on `aws_vpc_block_public_access_exclusion` resource ([#1170](https://github.com/terraform-aws-modules/terraform-aws-vpc/issues/1170)) ([0d11295](https://github.com/terraform-aws-modules/terraform-aws-vpc/commit/0d11295d8b45f1319c46bfd044030035e9e02445))
+
 ## [5.19.0](https://github.com/terraform-aws-modules/terraform-aws-vpc/compare/v5.18.1...v5.19.0) (2025-02-12)
 
 

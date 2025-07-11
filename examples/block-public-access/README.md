@@ -30,8 +30,8 @@ Currently only `internet_gateway_block_mode` is supported, for which valid value
 
 VPC block public access exclusions can be applied at the VPC level e.g.:
 
-```
-vpc_block_public_access_exclusions = {
+```hcl
+  vpc_block_public_access_exclusions = {
     exclude_vpc = {
         exclude_vpc                     = true
         internet_gateway_exclusion_mode = "allow-bidirectional"
@@ -41,8 +41,8 @@ vpc_block_public_access_exclusions = {
 
 or at the subnet level e.g.:
 
-```
-vpc_block_public_access_exclusions = {
+```hcl
+  vpc_block_public_access_exclusions = {
     exclude_subnet_private1 = {
         exclude_subnet                  = true
         subnet_type                     = "private"
@@ -83,13 +83,13 @@ aws ec2 --region eu-west-1 describe-vpc-block-public-access-exclusions --exclusi
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.79 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.79 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 6.0 |
 
 ## Modules
 
